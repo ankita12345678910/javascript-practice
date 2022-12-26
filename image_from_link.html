@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label for="test1">Enter any image URL:</label><br>
+    <textarea name="test" id="test1" cols="30" rows="10"></textarea><br>
+    <button id="box" onclick="convert()">Convert</button><br>
+    <img id="img" src="" style="width:300px">
+    <button id="increaseSize" onclick="increaseSize()">increase</button>
+    <button id="decreaseSize" onclick="decreaseSize()">decrease</button>
+
+    <script>
+        document.getElementById('increaseSize').style.display = "none";
+        document.getElementById('decreaseSize').style.display = "none";
+
+        function increaseSize() {
+            current_width = img.clientWidth;
+            img.style.width = (current_width + 30) + "px";
+        }
+        function decreaseSize() {
+            current_width = img.clientWidth;
+            img.style.width = (current_width - 30) + "px";
+        }
+
+        function convert() {
+            title = document.getElementById('test1').value;
+            function isValidUrl(title) {
+                try {
+                    new URL(title);
+                    return true;
+                } catch (err) {
+                    return false;
+                }
+            }
+            if (isValidUrl(title) == true) {
+                a = img.src = title;
+                document.getElementById('increaseSize').style.display = "block";
+                document.getElementById('decreaseSize').style.display = "block";
+            } else {
+                alert("Please enter valid URL");
+            }
+        }
+    </script>
+</body>
+
+</html>
