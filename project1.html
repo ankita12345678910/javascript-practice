@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4 mx-0">
+        <h1 class="display-4">Current time is:<span id=time></span></h1><br>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Browse time</a>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+        </script>
+    <script>
+        setInterval(() => {
+            let a;
+            let time;
+            a = new Date();
+            time = a.getHours() + ":" + a.getMinutes() + ":" + a.getSeconds();
+            document.getElementById('time').innerHTML = time;
+
+        }, 1000);
+    </script>
+
+</body>
+
+
+<!-- check whether a cookie is enabled or not -->
+<!-- <!DOCTYPE html>
+<body onload="checkCookies()">
+
+<h2>JavaScript HTML Events</h2>
+
+<p id="demo"></p>
+
+<script>
+function checkCookies() {
+  var text = "";
+  if (navigator.cookieEnabled == true) {
+    text = "Cookies are enabled.";
+  } else {
+    text = "Cookies are not enabled.";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+</body> -->
+
+</html>
+<!-- When you leave the input field, a function is triggered which transforms the input text to upper case. -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML Events</h2>
+Enter your name: <input type="text" id="fname" onchange="upperCase()">
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<script>
+function upperCase() {
+  const x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+</body>
+</html> -->
+
+
+<!-- take input from user..& print their full name -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Objects</h2>
+Enter your name: <input type="text" id="fname" onchange="details()">
+Enter your name: <input type="text" id="lname" onchange="details()">
+<p id="demo"></p>
+
+<script>
+// Create an object:
+function details(){
+ const x = document.getElementById("fname");
+ const y = document.getElementById("lname");
+const person = {
+  firstName: x.value,
+  lastName: y.value,
+  id: 5566,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+document.getElementById("demo").innerHTML = "The full name is: "+person.fullName();
+}
+
+
+// Display data from the object:
+
+</script>
+
+</body>
+</html> -->
+
+<!-- The toDateString() method converts a date to a date string: -->

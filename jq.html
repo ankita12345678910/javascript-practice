@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <!-- <script src="js/jquery.js"></script> -->
+    <style>
+        #test1 {
+            background: pink;
+            padding: 10px;
+            border: 1px solid #000;
+            height: 200px;
+            width: 30%;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="test1">
+        <h2>test box 1</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Quibusdam, perferendis.
+        </p>
+
+    </div>
+    <button id="append">Append</button>
+    <button id="prepend">prepend</button>
+    <a href="https://www.youtube.com/" id="prevent">youtube</a><br>
+    <a href="https://www.facebook.com/">facebook</a>
+    <!-- <div id="test2">
+        <h2>test box 2</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur
+           
+        </p>
+    </div>  -->
+    <!-- <form action="" id="jform">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+        <br><br>
+        <label for="class">class</label>
+        <input type="text" id="class" name="class">
+        <br><br>
+        <label for="sem">semester</label>
+        <select id="sem">
+            <option value="1st">1st</option>
+            <option value="2nd">2nd</option>
+            <option value="3rd">3rd</option>
+            <option value="4th">4th</option>
+
+
+        </select>
+        <br><br>
+        <input type="submit" value="submit">
+
+    </form> -->
+    <p id="demo"></p>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous">
+        </script>
+    <script>
+        $(document).ready(function () {
+            //    var a= $('#test1').html()
+            //    console.log(a)
+
+            //click event
+            // $('#test1').click(function () {
+            //     $('#test1').css('background-color', 'red')
+            // });
+
+            // //double click
+            // $('#test1').dblclick(function () {
+            //     $('#test1').css('background-color', 'green')
+            // });
+
+            // //right click
+            // $('#test1').contextmenu(function () {
+            //     $('#test1').css('background-color', 'blue')
+            // });
+
+            // //mouse enter
+            // $('#test1').mouseenter(function () {
+            //     $('#test1').css('background-color', 'orange')
+            // });
+
+            // //mouse leave
+            // $('#test1').mouseleave(function () {
+            //     $('#test1').css('background-color', 'purple')
+            // });
+
+            // //keyboard event
+            // $('body').keypress(function () {
+            //     $(this).css('background-color', 'orange')
+            // });
+
+            // //key up event
+            // $('body').keyup(function () {
+            //     $(this).css('background-color', 'yellow')
+            // });
+
+            // window event
+            // $(window).scroll(function(){
+            //     console.log("I am scrolling");
+            // });
+
+            // $('#test1').scroll(function(){
+            //     console.log("I am scrolling");
+            // });
+
+            //resize event
+            // $(window).resize(function () {
+            //     console.log("resizing the window");
+            // });
+
+
+            // $('#jform').submit(function () {
+            //     var a = $('#name').val();
+            //     alert("hello "+a);
+            // });
+
+            // $('#append').click(function(){
+            //     $('#test1').append("<h1> Hello This is jquery</h1>");
+            // });
+
+            // $('#prepend').click(function(){
+            //     $('#test1').prepend("<h1> Hello This is jquery</h1>");
+            // });
+
+            // $('#test1').on('mouseover mouseout mousedown',function(){
+            //     $('#demo').html(event.type +":"+ event.which)
+            // });
+
+            // // to know where we clicked
+            // $('#test1').on('mouseover mouseout mousedown',function(){
+            //     $('#demo').html("Target element:"+ event.target.innerHTML)
+            //     $('#demo').html("Target element:"+ event.target.nodeName)
+            // });
+
+
+            // prevent Default
+            $('#prevent').click(function (event) {
+                event.preventDefault();
+                var a = event.isDefaultPrevented();
+                $('#demo').html(a);
+            });
+        });
+    </script>
+</body>
+
+</html>

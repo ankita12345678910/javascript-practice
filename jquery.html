@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+</head>
+
+<body>
+    <h1 class="demo">hello world</h1>
+    <h1 id="demo1">hello world2</h1>
+    <h1 class="demo">hello world3</h1>
+    <h1>hello world4</h1>
+    <h1>hello world5</h1>
+    <button id="btn">Toggle now</button>
+
+    <div id="test">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto magni unde
+        odio eum alias illo reprehenderit libero ipsa magnam atque quaerat corporis dolores,
+        perferendis molestias autem! Esse deserunt veniam maxime, repudiandae fugit saepe
+        odio neque vel minima numquam. Qui, aut sed nobis iste magnam exercitationem ducimus!
+        Voluptas eum neque, odit quidem quod incidunt molestiae. Deserunt odio quod libero
+        laudantium sequi repudiandae in! Odio a distinctio aperiam cupiditate explicabo
+        quis at quaerat provident ipsa, tempore facere iste alias nulla nostrum nihil
+        veritatis, magnam nisi ad iusto? Obcaecati itaque sunt quod eligendi magnam omnis
+        aliquid odit saepe corporis, voluptatem atque animi veniam.
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous">
+        </script>
+    <script>
+
+        $(document).ready(function () {
+            // $('h1').click(function () {
+            //     console.log("you clicked on h1", this);
+            //     //     // $(this).hide();//if we want to hide the particular h1 element we use this
+            // })
+            // $('h1').dblclick(function () {
+            //     console.log("you double clicked on h1", this);
+
+            // })
+            // $('h1').mouseenter(function () {
+            //     console.log("you entered: ", this);
+
+            // })
+            //$('.demo').mouseenter();
+            //event: mouse: click,dblclick,mouseenter,mouseleave;
+            //KeyboardEvent: keypress,keydown,keyup
+            //formevent: submit,change,focus,blur
+            //document/window event: load,resize,scroll,unload
+            //if we want to add more than one event on an selector to using the below code :
+
+            // $('h1').on(
+            //     {
+            //         click: function(){
+            //             console.log("thanks for clicking",this);
+            //         },
+            //         mouseleave: function(){
+            //             console.log("mouseleave");
+            //         },
+            //         dblclick: function(){
+            //             console.log("you double clicked on it");
+            //         }
+            //     })
+
+
+            // $('#test').hide(1500,function(){
+            //     console.log("hidden");
+            // })
+            // $('#test').show(1500,function(){
+            //     console.log("shown");
+            // })
+            // $('#btn').click(function(){
+            //     $('#test').toggle(1000);//fadeOut(),fadeIn(),fadeToggle(),fadeTo()
+            // })
+            // $('#demo1').dblclick(function(){
+            //     console.log("double click");
+            // })
+            // $('#demo1').mouseenter(function(){
+            //     console.log("mouse enter");
+            // })
+            // $('p').mousedown(function(){
+            //     console.log("mouse down");
+            // })
+            // $('#test').animate({
+            //     opacity:0.3,
+            //     height: '150px',
+            //     width:'350px',
+            // },"fast")
+            //queue 
+            $('#test').animate({ opacity: 0.3 }, 1000);
+            $('#test').animate({ opacity: 0.9 }, 2000);
+            $('#test').animate({ width: "440px" }, 1000);
+            // toggleclass('demo') function is used to remove or add demo class to selected element
+            //$('body').html('momo')//if i wanna add html on it
+        })
+
+    </script>
+</body>
+
+</html>

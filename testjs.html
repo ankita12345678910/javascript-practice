@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header" class="abc">Hello World </h1>
+    <p id="test" class="abc">This is my webpage</p>
+    <button onclick="openWindow()">Open window</button>
+    <button onclick="closeWindow()">Close window</button>
+    <script>
+        var myWindow;
+        function openWindow(){
+            myWindow= window.open("https://www.youtube.com","_blank");
+        }
+        function closeWindow(){
+            myWindow.close();
+        }
+        // let iheigth = window.innerHeight;
+        // console.log(iheight);
+
+        // let oheigth = window.outerHeight;
+        // console.log(oheight);
+        var arr=[6,8,9,4,5]
+        arr.forEach(function(element){
+            // console.log(element)
+        })
+    </script>
+</body>
+</html>
